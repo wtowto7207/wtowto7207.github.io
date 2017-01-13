@@ -19,7 +19,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>口袋妖怪 | DUO</title>
+    <title>Tag:   | DUO</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
@@ -68,7 +68,7 @@
                     
                     <li id="nav-curriculumvitae"><a href="/curriculumvitae">关于</a></li>
                     
-                    <li id="nav-links"><a href="/links">链接</a></li>
+                    <li id="nav-links"><a href="http://weibo.com/2458963351/profile?rightmod=1&wvr=6&mod=personinfo">微博</a></li>
                     
                     
                     <li><a href="https://github.com/wtowto7207" target="_blank">GitHub</a></li>
@@ -91,43 +91,47 @@
     });
     </script>
 
-    <article class="post container">
-    <div class="well post-body first-post last-post">
-        <h1>口袋妖怪</h1>
-        
-        <div class="time-info">
-发表于:<time datetime="2017-01-13T01:13:52.000Z" itemprop="datePublished">2017-01-13</time>，更新于:<time datetime="2017-01-13T01:16:35.866Z" itemprop="dateModified">2017-01-13</time>，By <a href="https://wtowto7207.github.io" title="Duo">Duo</a>
+    
+
+<div class="container archive-body">
+    <div class="row">
+        <div class="col-xs-3 well">
+            <div class="archive-title" >
+                <h2 class="tag-icon">标签</h2>
+                
+                <a data-src="/tags/Pokemon/" href="#Pokemon" title="Pokemon">Pokemon<sup>2</sup></a>
+                
+                <a data-src="/tags/口袋妖怪/" href="#口袋妖怪" title="口袋妖怪">口袋妖怪<sup>1</sup></a>
+                
+                <a data-src="/tags/银魂/" href="#银魂" title="银魂">银魂<sup>1</sup></a>
+                
+            </div>
         </div>
         
-        <div class="post-body-inner">
-            <div id="toc" class="toc-article well">
-                <strong class="toc-title">大纲</strong>
-                
-            </div>    
-            
-            
-			
-            <section class="comment">
-<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="/tags/index.html" data-title="口袋妖怪" data-url="https://wtowto7207.github.io/tags/index.html"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"YOUR_DUOSHUO_SHORT_NAME"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0]
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end -->
-</section>
+        <div class="all-list-box">
         </div>
     </div>
-</article>
+</div>
+    
+<script>
+$(function() {
+    var box = $('.all-list-box');
+    var first = $('.archive-title a:first-of-type');
+    var list = $('.archive-title a');
+    
+    box.load(first.attr('data-src').toString() + ' #tag-list-body');
+    first.addClass('currentTag');
+    list.each(function() {
+        $(this).click(function() {
+            var listSrc = $(this).attr('data-src').toString() + ' #tag-list-body';
+            box.load(listSrc);
+            list.removeClass('currentTag');
+            $(this).addClass('currentTag');
+        });
+    });
+});
+</script>
+
 
     <footer id="footer">
     <div id="bottom-tip">
